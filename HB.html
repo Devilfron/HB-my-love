@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>С Днём рождения!</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1 id="title">🎉 С Днём Рождения! 🎈</h1>
+<p>Желаю счастья, здоровья и улыбок!</p>
+<button onclick="showMessage()">Нажми для сюрприза</button>
+</body>
+<script>
+function showMessage() {
+alert('Ура! Пусть этот день будет самым лучшим!');
+}
+// Функция создания летающих сердечек
+function createHeart() {
+const heart = document.createElement('div'); heart.classList.add('heart');
+heart.innerHTML = '❤️';
+heart.style.left = Math.random() * 100 + 'vw';
+heart.style.animationDuration = (Math.floors || Math.floor)(Math.random() * 3 + 2) +
+'s';
+document.body.appendChild(heart);
+setTimeout(() => {
+heart.remove();
+}, 4000);
+}
+setInterval(createHeart, 400);
+</script>
+</body>
+</html>
