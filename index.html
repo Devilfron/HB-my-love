@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy birthday!</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy birthday!</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body> 
   <h1 id="title">🎉 С Днём Рождения, котенок!🎈</h1>
   <p>Пусть все твои "СКОРО" преврaтятся в "НАКОНЕЦ-ТО"💋🎂🥳!</p> 
   <button onclick="showMessage()">Нажми для сюрприза</button>
+
+  <div id="surpriseMessage" style="display: none;">
+    Ура! Пусть этот день будет самым лучшим! 💖
+  </div>
+  <audio id="cardAudio" preload="auto"  loop>
+    <source src="src/Technetium - Happy Birthday.mp3" type="audio/mpeg">
+</audio>
+<script src="script.js"></script> 
 </body>
-<script src="script.js"></script>
+
 
 </html> 
