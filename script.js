@@ -1,4 +1,3 @@
-<script>
  function showMessage() {
   alert('Ура! Пусть этот день будет самым лучшим!');
  }
@@ -16,4 +15,4 @@ document.body.appendChild(heart);
   }, 4000);
 }
  setInterval(createHeart, 400);
-</script>
+
