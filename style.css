@@ -38,8 +38,9 @@ button {
 
 button:hover {
  transform: scale(1.05);
- background-color: #ff6b81; }
- @keyframes bounce {
+ background-color: #ff6b81; 
+}
+@keyframes bounce {
 0%, 20%, 50%, 80%, 100% {
  transform: translateY(0);
 }
