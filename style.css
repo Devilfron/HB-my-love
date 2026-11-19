@@ -6,8 +6,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 850px auto !important;
-    background-position: 230px 60px !important;
+    background-size: 850px auto;
+    background-position: 230px 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,6 +18,7 @@ body {
     overflow: hidden;
     text-align: center;
     color: #fff;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -67,7 +68,6 @@ button:hover {
     color: #f7071b;
     font-size: 20px;
     animation: float 2s linear;
-    animation-timing-function: linear; /* Равномерная скорость без рывков */
     bottom: -30px;
     pointer-events: none; 
 }
@@ -108,4 +108,64 @@ button:hover {
     transform: translateY(0) scale(1);
   }
 }
+
+/* Адаптация для мобильных телефонов и планшетов (включая 960x1440 и 1032x1376) */
+@media (max-width: 1032px) {
+   body {
+    background-size: 520px auto;
+    background-position: center 80%;
+    justify-content: flex-start;
+    padding-top: 380px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+/* Адаптация для мобильных телефонов */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 15px;
+    /* Уменьшаем картинку подарка и ставим её внизу по центру */
+    background-size: 350px auto;
+    background-position: center 80%;
+    padding-top: 270px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* На телефонах fixed-фон часто дёргается, поэтому меняем на scroll */
+    background-attachment: scroll;
+  }
+
+  /* Уменьшаем главный заголовок, чтобы не вылезал за края */
+  h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  /* Делаем основной текст и кнопку удобными для нажатия пальцем */
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 14px 28px;
+    max-width: 90%;
+  }
+
+  /* Карточка с появившимся поздравлением */
+  #surpriseMessage {
+    font-size: 18px;
+    padding: 14px 20px;
+    max-width: 90%;
+  }
+}
+
+
 
